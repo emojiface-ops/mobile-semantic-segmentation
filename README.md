@@ -35,24 +35,17 @@ Beside the U-Net like model, [PSPNet](https://arxiv.org/abs/1612.01105) like mod
 
 ### Data Preparation
 
-Data is available at LFW. To get mask images, refer [issue #11](../../issues/11) for more. After you got images and masks, put the images of faces and masks as shown below.
+Data is available at [LFW](http://vis-www.cs.umass.edu/lfw/part_labels/). To download masks and images, run:
 ```
-data/
-  raw/
-    images/
-      0001.jpg
-      0002.jpg
-    masks/
-      0001.ppm
-      0002.ppm
+python download-data.py
 ```
 
-Then, convert it to numpy binary format for portability.
+Then, convert to numpy binary format for portability.
 ```
-python data.py --img_size=128
+python data.py
 ```
 
-Data augmentation will be done on the fly during training phase. I used rotation, shear ,zoom and horizontal flip. 
+Data augmentation will be done on the fly during training phase. I used rotation, shear, zoom and horizontal flip.
 
 
 ### Training
@@ -89,5 +82,3 @@ As the purpose of this project is to make model run in mobile device, this repos
 - [ ] Example app for Android
 - [ ] Aux loss
 - [ ] Some more optimizations??
-
-

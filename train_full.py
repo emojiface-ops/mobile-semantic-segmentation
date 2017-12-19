@@ -25,8 +25,8 @@ def train(img_file, mask_file, epochs, batch_size):
     lr_base = 0.01 * (float(batch_size) / 16)
 
     model = MobileUNet(input_shape=(img_height, img_width, 3),
-                       alpha=1,
-                       alpha_up=0.25)
+                       alpha=0.5,
+                       alpha_up=0.5)
 
     model.summary()
     model.compile(
