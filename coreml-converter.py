@@ -16,7 +16,7 @@ def main(input_model_path):
     :return:
     """
     out_path = re.sub(r"h5$", 'mlmodel', input_model_path)
-
+    print 'input_model_path: ', input_model_path
     hack_coremltools()
 
     with CustomObjectScope(custom_objects()):
@@ -39,7 +39,7 @@ if __name__ == '__main__':
     parser.add_argument(
         '--input_model_path',
         type=str,
-        default='artifacts/mu_128_1_025.h5',
+        default='artifacts/model.h5',
     )
     args, _ = parser.parse_known_args()
 

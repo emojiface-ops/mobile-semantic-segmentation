@@ -50,7 +50,7 @@ if __name__ == '__main__':
     parser.add_argument(
         '--pb_file',
         type=str,
-        default='artifacts/224_1_1.pb',
+        default='artifacts/model.pb',
     )
     parser.add_argument(
         '--img_file',

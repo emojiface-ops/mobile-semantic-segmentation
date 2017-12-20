@@ -4,3 +4,5 @@ data/*
 artifacts/*
 logs/*
 !.keep
+*.h5
+*.npy

@@ -153,7 +153,7 @@ if __name__ == '__main__':
     parser.add_argument(
         '--img_size',
         type=int,
-        default=192,
+        default=224,
     )
     args, _ = parser.parse_known_args()
 

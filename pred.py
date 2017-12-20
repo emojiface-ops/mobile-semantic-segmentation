@@ -12,8 +12,8 @@ from data import seed, standardize
 from loss import np_dice_coef
 from nets.MobileUNet import custom_objects
 
-SAVED_MODEL1 = 'artifacts/224_1_1.h5'
-SAVED_MODEL2 = 'artifacts/224_1_1.h5'
+SAVED_MODEL1 = 'artifacts/model.h5'
+SAVED_MODEL2 = 'artifacts/model.h5'
 
 size = 224
 

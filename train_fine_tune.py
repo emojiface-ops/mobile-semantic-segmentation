@@ -75,13 +75,13 @@ if __name__ == '__main__':
     parser.add_argument(
         '--img_file',
         type=str,
-        default='data/images.npy',
+        default='data/images-224.npy',
         help='image file as numpy format'
     )
     parser.add_argument(
         '--mask_file',
         type=str,
-        default='data/masks.npy',
+        default='data/masks-224.npy',
         help='mask file as numpy format'
     )
     parser.add_argument(

@@ -4,7 +4,7 @@ import numpy as np
 
 from nets.MobileUNet import MobileUNet
 
-img_size = 128
+img_size = 224
 batch_num = 16
 
 

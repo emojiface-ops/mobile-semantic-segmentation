@@ -41,7 +41,7 @@ if __name__ == '__main__':
     parser.add_argument(
         '--input_model_path',
         type=str,
-        default='artifacts/224_1_1.h5',
+        default='artifacts/model.h5',
     )
     parser.add_argument(
         '--output_dir',
@@ -51,7 +51,7 @@ if __name__ == '__main__':
     parser.add_argument(
         '--output_fn',
         type=str,
-        default='224_1_1.pb',
+        default='model.pb',
     )
     args, _ = parser.parse_known_args()
 

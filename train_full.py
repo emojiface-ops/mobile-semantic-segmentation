@@ -13,8 +13,8 @@ from nets.MobileUNet import MobileUNet
 checkpoint_path = 'artifacts/checkpoint_weights.{epoch:02d}-{val_loss:.2f}.h5'
 trained_model_path = 'artifacts/model.h5'
 
-nb_train_samples = 2341
-nb_validation_samples = 586
+nb_train_samples = 488
+nb_validation_samples = 122
 
 
 def train(img_file, mask_file, epochs, batch_size):
@@ -31,7 +31,7 @@ def train(img_file, mask_file, epochs, batch_size):
     model.summary()
     model.compile(
         optimizer=optimizers.SGD(lr=0.0001, momentum=0.9),
-        # optimizer=Adam(lr=0.001),
+        # optimizer=optimizers.Adam(lr=0.001),
         # optimizer=optimizers.RMSprop(),
         loss=dice_coef_loss,
         metrics=[
@@ -69,13 +69,13 @@ if __name__ == '__main__':
     parser.add_argument(
         '--img_file',
         type=str,
-        default='data/images-128.npy',
+        default='data/images-224.npy',
         help='image file as numpy format'
     )
     parser.add_argument(
         '--mask_file',
         type=str,
-        default='data/masks-128.npy',
+        default='data/masks-224.npy',
         help='mask file as numpy format'
     )
     parser.add_argument(
